@@ -1,0 +1,16 @@
+body, html {
+    background-color: #e0e0e0;
+    color: #4a4a4a;
+}
+
+.delayedscroll > * {
+    text-align: center;
+    display: table;
+}
+
+.text {
+    font-family: sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+}
