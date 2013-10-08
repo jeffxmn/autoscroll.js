@@ -1,9 +1,9 @@
 /*
- * Created by Jeff Martin, Toronto October 2013
+ * Created by Jeff Martin, 2013
  */
 $(function() {
     /* Amount of times the user needs to scroll to trigger an scroll */
-    var SCROLL_COUNTER_LIMIT = 50;
+    var SCROLL_COUNTER_LIMIT = 2;
 
     /* Scrolling speed in MS */
     var SCROLL_SPEED = 750;
