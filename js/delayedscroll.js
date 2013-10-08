@@ -53,10 +53,11 @@ $(function() {
 
     /* Detect arrow keys */
     $(document).keydown(function(e) {
-        e.preventDefault();
         if (e.keyCode == 38) {
+            e.preventDefault();
             scrollUp();
         } else if (e.keyCode == 40) {
+            e.preventDefault();
             scrollDown();
         }
     });
