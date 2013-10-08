@@ -3,7 +3,7 @@
  */
 $(function() {
     /* Amount of times the user needs to scroll to trigger an scroll */
-    var SCROLL_COUNTER_LIMIT = 50;
+    var SCROLL_COUNTER_LIMIT = 2;
 
     /* Scrolling speed in MS */
     var SCROLL_SPEED = 750;
