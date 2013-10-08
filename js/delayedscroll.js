@@ -24,7 +24,7 @@ $(function() {
         }
 
         // When it is time to scroll, then scroll like the wind
-        if (e.detail < 0) {
+        if (e.originalEvent.detail < 0) {
             scrollUp();
         } else {
             scrollDown();
@@ -44,6 +44,16 @@ $(function() {
         if (e.originalEvent.wheelDelta > 0) {
             scrollUp();
         } else {
+            scrollDown();
+        }
+    });
+
+    /* Detect arrow keys */
+    $(document).keydown(function(e) {
+        e.preventDefault();
+        if (e.keyCode == 38) {
+            scrollUp();
+        } else if (e.keyCode == 40) {
             scrollDown();
         }
     });
