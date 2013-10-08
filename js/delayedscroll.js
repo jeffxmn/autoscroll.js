@@ -1,3 +1,6 @@
+/*
+ * Created by Jeff Martin, 2013
+ */
 $(function() {
     /* Amount of times the user needs to scroll to trigger an scroll */
     var SCROLL_COUNTER_LIMIT = 50;
@@ -50,10 +53,11 @@ $(function() {
 
     /* Detect arrow keys */
     $(document).keydown(function(e) {
-        e.preventDefault();
         if (e.keyCode == 38) {
+            e.preventDefault();
             scrollUp();
         } else if (e.keyCode == 40) {
+            e.preventDefault();
             scrollDown();
         }
     });
