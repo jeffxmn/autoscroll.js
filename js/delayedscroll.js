@@ -24,13 +24,13 @@
  
 $(function() {
     /* Amount of times the user needs to scroll to trigger an scroll */
-    var SCROLL_COUNTER_LIMIT = 2;
+    var SCROLL_COUNTER_LIMIT = 1;
 
     /* Scrolling speed in ms */
     var SCROLL_SPEED = 750;
 
     /* The delay in ms until a user can scroll again. This is to handle inertial scrolling */
-    var SCROLL_DELAY = 3000;
+    var SCROLL_DELAY = 2500;
 
     /* Keep track of a counter indicating when it is time to scroll */
     var scrollCounter = 0;
