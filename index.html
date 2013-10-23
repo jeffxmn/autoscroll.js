@@ -3,44 +3,47 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>delayedscroll.js by mjeff</title>
+    <title>autoscroll.js by mjeff</title>
   </head>
 
   <body>
-    <header>
+    <div id="container">
       <div class="inner">
-        <h1>delayedscroll.js</h1>
-        <h2>A JavaScript library that enables delayed, automatic, scrolling</h2>
-        <a href="https://github.com/mjeff/delayedscroll.js" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+        <header>
+          <h1>autoscroll.js</h1>
+          <h2>A JavaScript library that enables delayed, automatic, scrolling</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/mjeff/autoscroll.js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/mjeff/autoscroll.js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/mjeff/autoscroll.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
           <h3>
-<a name="delayedscrolljs" class="anchor" href="#delayedscrolljs"><span class="octicon octicon-link"></span></a>delayedscroll.js</h3>
+<a name="autoscrolljs" class="anchor" href="#autoscrolljs"><span class="octicon octicon-link"></span></a>autoscroll.js</h3>
 
 <h2>
-<a name="including-delayedscrolljs-in-your-website" class="anchor" href="#including-delayedscrolljs-in-your-website"><span class="octicon octicon-link"></span></a>Including delayedscroll.js in your website</h2>
+<a name="including-autoscrolljs-in-your-website" class="anchor" href="#including-autoscrolljs-in-your-website"><span class="octicon octicon-link"></span></a>Including autoscroll.js in your website</h2>
 
-<p><strong>delayedscroll.js</strong> is a JavaScript library that enables delayed, automatic, scrolling on one-page, full-width websites.</p>
+<p><strong>autoscroll.js</strong> is a JavaScript library that enables delayed, automatic, scrolling on one-page, full-width websites.</p>
 
 <p>The library is lightweight and implementation is straightforward.</p>
 
 <p>To include the library in your website, you need to include two files:</p>
 
-<pre><code>&lt;link href="css/delayedscroll.css" rel="stylesheet"&gt;
+<pre><code>&lt;link href="css/autoscroll.css" rel="stylesheet"&gt;
 </code></pre>
 
 <p>and:</p>
@@ -48,15 +51,15 @@
 <pre><code>&lt;script src="js/delayedscroll.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<p><strong><strong>Note:</strong></strong> delayedscroll.js also depends on JQuery. Make sure you have JQuery included!</p>
+<p><strong><strong>Note:</strong></strong> autoscroll.js also depends on JQuery. Make sure you have JQuery included!</p>
 
 <h2>
-<a name="using-delayedscrolljs" class="anchor" href="#using-delayedscrolljs"><span class="octicon octicon-link"></span></a>Using delayedscroll.js</h2>
+<a name="using-autoscrolljs" class="anchor" href="#using-autoscrolljs"><span class="octicon octicon-link"></span></a>Using autoscroll.js</h2>
 
-<p>To create full-height-width pages with the delayed scrolling effect, you must first add a <code>delayedscroll</code> class to a container <code>&lt;div&gt;</code> directly under <code>&lt;body&gt;</code>:</p>
+<p>To create full-height-width pages with the delayed scrolling effect, you must first add a <code>autoscroll</code> class to a container <code>&lt;div&gt;</code> directly under <code>&lt;body&gt;</code>:</p>
 
 <pre><code>&lt;body&gt;
-    &lt;div class="delayedscroll"&gt;
+    &lt;div class="autoscroll"&gt;
         &lt;!-- Pages here --&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -65,7 +68,7 @@
 <p>Each page is then a nested <code>&lt;div&gt;</code> under the <code>delayedscroll</code> div, labeled as <code>page-*</code>, where * is the page number, starting from 1:</p>
 
 <pre><code>&lt;body&gt;
-    &lt;div class="delayedscroll"&gt;
+    &lt;div class="autoscroll"&gt;
         &lt;div class="page-1"&gt;
             &lt;span&gt;Hi, I'm Page 1&lt;/span&gt;
         &lt;/div&gt;
@@ -84,7 +87,7 @@
 <h3>
 <a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser Support</h3>
 
-<p>delayedscroll.js has been tested on:</p>
+<p>autoscroll.js has been tested on:</p>
 
 <pre><code>- Chrome 25.0 and up
 - Firefox 20.0.1 and up
@@ -104,7 +107,7 @@
 <h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
-<p>delayedscroll is open and free for the public to share, distribute, and derivate on, as long as attribution is given. It made sense then that the MIT License was the best suited for this, and so delayedscroll.js is licensed under the MIT License:</p>
+<p>autoscroll is open and free for the public to share, distribute, and derivate on, as long as attribution is given. It made sense then that the MIT License was the best suited for this, and so autoscroll.js is licensed under the MIT License:</p>
 
 <pre><code>The MIT License (MIT)
 
@@ -131,28 +134,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <h3>
 <a name="contact" class="anchor" href="#contact"><span class="octicon octicon-link"></span></a>Contact</h3>
 
-<p>Having trouble with delayedscroll.js? Please file an Issue on the GitHub repository, or email me at: <a href="mailto:jeffrey.mtn@gmail.com">jeffrey.mtn@gmail.com</a>.</p>
+<p>Having trouble with autoscroll.js? Please file an Issue on the GitHub repository, or email me at: <a href="mailto:jeffrey.mtn@gmail.com">jeffrey.mtn@gmail.com</a>.</p>
 
-<hr><p>Thank you for checking out delayedscroll.js!</p>
+<hr><p>Thank you for checking out autoscroll.js!</p>
         </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/mjeff/delayedscroll.js/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/mjeff/delayedscroll.js/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+        <footer>
+          autoscroll.js is maintained by <a href="https://github.com/mjeff">mjeff</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
 
-          <p class="repo-owner"><a href="https://github.com/mjeff/delayedscroll.js"></a> is maintained by <a href="https://github.com/mjeff">mjeff</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
+        
       </div>
     </div>
-
-  
   </body>
 </html>
